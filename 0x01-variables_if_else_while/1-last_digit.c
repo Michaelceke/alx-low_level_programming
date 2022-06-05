@@ -21,7 +21,7 @@ int main(void)
 	{
 		printf("%i\n", (n % 10));
 	}
-	else if (ldt > 5)
+	else if ((n % 10) > 5)
 	{
 		printf("greater than 5\n");
 	}
