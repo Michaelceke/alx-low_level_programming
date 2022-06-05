@@ -13,11 +13,11 @@ int main(void)
 	float floater;
 	long long longer_throat;
 
-	printf("size of a char is %u byte(s)\n", sizeof(charchar));
-	printf("Size of an int: %u byte(s)\n", sizeof(intint));
-	printf("Size of a long int: %u byte(s)\n", sizeof(longer));
-	printf("Size of a float: %u byte(s)\n", sizeof(floater));
-	printf("Size of a long long: %u byte(s)\n", sizeof(longer_throat));
+	printf("size of a char is % byte(s)\n", sizeof(charchar));
+	printf("Size of an int: % byte(s)\n", sizeof(intint));
+	printf("Size of a long int: % byte(s)\n", sizeof(longer));
+	printf("Size of a float: % byte(s)\n", sizeof(floater));
+	printf("Size of a long long: % byte(s)\n", sizeof(longer_throat));
 
 	return (0);
 }
