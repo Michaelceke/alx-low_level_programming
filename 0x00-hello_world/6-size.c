@@ -10,8 +10,8 @@ int main(void)
 	char charchar;
 	int intint;
 	long longer;
-	float floater;
 	long long longer_throat;
+	float floater;
 
 	printf("size of a char is %d byte(s)\n", sizeof(charchar));
 	printf("Size of an int: %d byte(s)\n", sizeof(intint));
