@@ -16,7 +16,7 @@ int main(void)
 			putchar(lowercase);
 		}
 
-		lowercase++
+		lowercase++;
 	}
 	putchar('\n');
 
