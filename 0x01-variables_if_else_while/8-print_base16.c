@@ -7,8 +7,8 @@
 
 int main(void)
 {
-	char num1_9 = '0';
-	char letter_a-f = 'a';
+	int num1_9 = '0';
+	char lettera_f = 'a';
 
 	while (num1_9 <= '9')
 	{
@@ -16,10 +16,10 @@ int main(void)
 		num1_9++;
 	}
 
-	while (letter_a-f <= 'f')
+	while (lettera_f <= 'f')
 	{
-		putchar(letter_a-f);
-		letter_a-f++;
+		putchar(lettera_f);
+		lettera_f++;
 	}
 
 	putchar('\n');
