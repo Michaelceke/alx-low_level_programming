@@ -22,13 +22,14 @@ int main(void)
 			putchar(tens);
 			putchar(unit);
 
-			unit++;
 
 			if (tens != '8' ||  unit != '9')
 			{
 				putchar(',');
 				putchar(' ');
 			}
+
+			unit++;
 
 		}
 
