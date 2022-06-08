@@ -1,10 +1,16 @@
 #include "main.h"
 /**
- * print_alphabet - Print alphabet in lowercase using only _putchar
- * Return: 0
+ * 3-islower - Return 1 if letter is lowercase and 0 if not.
+ * @c: char type letter
+ * Return: 1 if lowercase, 0 if not lowercase
  */
 
-void print_alphabet(void)
+int _islower(int c)
 {
-	_putchar('\n');
+	if (c > 96 && c < 123)
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
