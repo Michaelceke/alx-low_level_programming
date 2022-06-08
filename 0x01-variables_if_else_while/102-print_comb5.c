@@ -20,6 +20,10 @@ int main(void)
 			{
 				for (o = '0'; o <= '9'; o++)
 				{
+					if (t == 1)
+					{
+						o = '1';
+					}
 					putchar(tens);
 					putchar(ones);
 					putchar(' ');
