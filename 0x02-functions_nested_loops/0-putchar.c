@@ -1,9 +1,16 @@
-#include <stdio.h>
-#include "_putchar.h"
+#include "main.h"
 
-int main()
+/**
+ * main Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
 {
-	_putchar('_putchar');
+	char *disp = "_putchar";
+	_putchar(*disp);
 	
+	_putchar('\n');
 	return(0);
 }
