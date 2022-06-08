@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * 3-islower - Return 1 if letter is lowercase and 0 if not.
+ * _islower - Return 1 if letter is lowercase and 0 if not.
  * @c: char type letter
  * Return: 1 if lowercase, 0 if not lowercase
  */
