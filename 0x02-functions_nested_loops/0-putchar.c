@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include "_putchar"
 
 int main()
 {
-	putchar('_putchar');
+	_putchar('_putchar');
 	
 	return(0);
 }
