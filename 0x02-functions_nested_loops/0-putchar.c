@@ -5,9 +5,9 @@
  *
  * Return: Always 0 (Success)
  */
-void main(void)
+int main(void)
 {
-	char *disp = "_putchar";
+	char *disp = '_putchar';
 
 	_putchar(*disp);
 
