@@ -9,8 +9,10 @@
 int main(void)
 {
 	char *disp = "_putchar";
+
 	_putchar(*disp);
-	
+
 	_putchar('\n');
-	return(0);
+
+	return (0);
 }
