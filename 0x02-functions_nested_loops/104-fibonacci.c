@@ -29,7 +29,7 @@ int main(void)
 	{
 		carry = (m + n) / 1000;
 		p = (m + n) - carry * 1000;
-		k = (1 + j) + carry;
+		k = (i + j) + carry;
 		m = n;
 		n = p;
 		i = j;
