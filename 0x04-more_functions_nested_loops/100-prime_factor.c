@@ -2,7 +2,7 @@
 
 /**
  * main - entry block
- * @avoid: no argument
+ * @void: no argument
  * Return: 0
  */
 
@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 2; i <= number i++)
 	{
-		if (number % i ==0)
+		if (number % i == 0)
 		{
 			number = number / i;
 
@@ -21,6 +21,6 @@ int main(void)
 	}
 
 	printf("%lu\n", i);
-	
+
 	return (0);
 }
