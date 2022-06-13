@@ -12,7 +12,7 @@ void more_numbers(void)
 
 	for (c = '0'; c <= '9'; c++)
 	{
-		char a = '0';
+		char a = 0;
 
 		while (a <= 14)
 		{
