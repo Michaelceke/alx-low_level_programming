@@ -29,7 +29,7 @@ void print_number(int n)
 		while (size > 0)
 		{
 			nth = n / size;
-			_putchar('0' * size);
+			_putchar('0' * nth);
 			n = n - (nth * size);
 			size = size / 10;
 		}
