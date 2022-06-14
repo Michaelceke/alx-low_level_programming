@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * *puts_half - update value.
- * *@str: value to be evaluate.
- * *Return: not.
- * */
+ * puts_half - update value.
+ * @str: value to be evaluate.
+ * Return: not.
+ */
 void puts_half(char *str)
 {
 	int len = 0;
