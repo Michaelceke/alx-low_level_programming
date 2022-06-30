@@ -1,64 +1,111 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * strtow - concatenates all the arguments of your program
- * @str: string
- * @av: arguments
- * Return: a pointer to a new string
+ * _strlen - find length of a string
+ * @s: string
+ * Return: int
+ */
+
+
+int _strlen(char *s)
+{
+	int size = 0;
+
+	for (; s[size] != '\0'; size++)
+		;
+	return (size);
+}
+
+/**
+ * *str_concat - concatenates two strings
+ *  @s1: string 1
+ *  @s2: string 2
+ *  Return: pointer
+ */
+
+char *str_addChar(char *str, char c)
+{
+	int size, i;
+	char *m;
+
+	size = _strlen(str);
+
+	m = malloc((size + 1) * sizeof(char) + 1);
+	if (m == 0)
+		return (0);
+
+	for (i = 0; i <= size; i++)
+		m[i] = str[i];
+
+	m[i + 1] = c;
+	m[i + 2] = '\0';
+
+	return (m);
+}
+
+
+/**
+ * nbr_spaces - return the number of occurent of a string
+ * @s: string to check
+ * Return: int
+ */
+
+unsigned int nbr_spaces(char *s)
+{
+	int i, cmpt = 0;
+
+	for (i = 0; s[i + 1] != '\0'; i++)
+	{
+		if (s[i]  == ' ' && s[i + 1] != ' ')
+			cmpt++;
+	}
+
+	return (cmpt + 1);
+}
+
+
+/**
+ *  strtow - split a sentence into multiple words.
+ *  @str: the string passed as argument.
+ *  Return: tokens
  */
 char **strtow(char *str)
 {
-	int i, w, j, k, count, m, wordf;
-	char **p;
-	char *x;
+	int i;
+	int spaces = nbr_spaces(str);
+	char **tokens = NULL;
+	char *token;
+	int checkingSpace = 0;
+	int word = 0;
 
-	w = 0;
-	j = 0;
-	i = 0;
-	count = 0;
-	if (*str == '\0' || str == NULL)
-		return (NULL);
+	if (!tokens)
+	{
+		printf("Failed");
+		return (0);
+	}
+	printf("looping");
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ' && (str[i + 1] != ' ' || str[i + 1] == '\0'))
-			w++;
-	}
-	p = (char **)malloc((w + 1) * sizeof(char *));
-	if (p == NULL)
-		return (NULL);
-	for (wordf = 0; str[wordf] && j <= w; wordf++)
-	{
-		count = 0;
-		if (str[wordf] != ' ')
+		if (str[i] == ' ')
 		{
-			for (i = wordf ; str[i] != '\0'; i++)
+			if (checkingSpace == 0)
 			{
-				if (str[i] == ' ')
-					break;
-				count++;
+				word++;
+				checkingSpace = 1;
 			}
-			*(p + j) = (char *)malloc((count + 1) * sizeof(char));
-			if (*(p + j) == NULL)
-			{
-				for (k = 0; k <= j; k++)
-				{
-					x = p[k];
-					free(x);
-				}
-				free(p);
-				return (NULL);
-			}
-			for (m = 0; wordf < i; wordf++)
-			{
-				p[j][m] = str[wordf];
-				m++;
-			}
-			p[j][m] = '\0';
-			j++;
 		}
+		else
+		{
+			printf("1");
+			token = tokens[word];
+			free(tokens[word]);
+			str_addChar(token, str[i]);
+			checkingSpace = 0;
+		}
+
 	}
-	p[j] = NULL;
-	return (p);
+
+	tokens[i] = NULL;
+
+	return (tokens);
 }
