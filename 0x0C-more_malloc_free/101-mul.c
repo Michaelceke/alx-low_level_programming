@@ -16,6 +16,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len);
  /**
   *  find_len - Finds the length of a string.
   *  @str: The string to be measured.
+  *  Description: function gets length of string.
   *  Return: The length of the string.
   */
 
